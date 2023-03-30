@@ -12,3 +12,21 @@ describe("Formulier", function () {
     assert(form);
   });
 });
+describe("Formulier", function () {
+  it("input veld voor naam is leeg", function () {
+    const inputVeldNaam = document.getElementById("naam");
+    assert(inputVeldNaam.value === "", "input veld voor Naam leeg");
+  });
+});
+describe("Formulier", () => {
+  it("input veld voor email is leeg", () => {
+    const inputVeldEmail = document.getElementById("e-mail");
+    assert(inputVeldEmail.value === "", "input veld voor email leeg");
+  });
+});
+describe("Formulier", () => {
+  it("input veld voor bericht is leeg", () => {
+    const inputVeldBericht = document.getElementById("bericht");
+    assert(inputVeldBericht.value === "", "input veld voor bericht leeg");
+  });
+});
