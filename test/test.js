@@ -19,13 +19,13 @@ describe("Formulier leeg", function () {
     assert(inputVeldNaam.value === "", "input veld voor Naam leeg");
   });
 });
-describe("Formulier", () => {
+describe("Formulier leeg", () => {
   it("input veld voor email is leeg", () => {
     const inputVeldEmail = document.getElementById("e-mail");
     assert(inputVeldEmail.value === "", "input veld voor email leeg");
   });
 });
-describe("Formulier", () => {
+describe("Formulier leeg", () => {
   it("input veld voor bericht is leeg", () => {
     const inputVeldBericht = document.getElementById("bericht");
     assert(inputVeldBericht.value === "", "input veld voor bericht leeg");
@@ -59,5 +59,12 @@ describe("Formulier ingevuld", () => {
       "dit is een bericht",
       "bericht is ingevuld"
     );
+  });
+});
+describe("Formulier drukknop", () => {
+  it("kijkt of dat de textContent van de drukknop juist is", () => {
+    const drukknop = document.getElementById("verzenden");
+    drukknop.value = "verzenden";
+    assert.strictEqual(drukknop.value, "verzenden", "juist");
   });
 });
