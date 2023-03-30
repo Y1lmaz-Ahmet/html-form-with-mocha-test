@@ -36,6 +36,28 @@ describe("Formulier ingevuld", () => {
   it("input veld voor naam is ingevuld", () => {
     const inputVeldNaam = document.getElementById("naam");
     inputVeldNaam.value = "Ahmet";
-    assert.strictEqual(inputVeldNaam.value, "Ahmet", "ingevuld");
+    assert.strictEqual(inputVeldNaam.value, "Ahmet", "ingevuld naam");
+  });
+});
+describe("Formulier ingevuld", () => {
+  it("Input veld voor email is ingevuld", () => {
+    const inputVeldEmail = document.getElementById("e-mail");
+    inputVeldEmail.value = "ahmet.79@hotmail.be";
+    assert.strictEqual(
+      inputVeldEmail.value,
+      "ahmet.79@hotmail.be",
+      "ingevuld email"
+    );
+  });
+});
+describe("Formulier ingevuld", () => {
+  it("Input veld voor bericht is ingevuld", () => {
+    const inputVeldBericht = document.getElementById("bericht");
+    inputVeldBericht.value = "dit is een bericht";
+    assert.strictEqual(
+      inputVeldBericht.value,
+      "dit is een bericht",
+      "bericht is ingevuld"
+    );
   });
 });
