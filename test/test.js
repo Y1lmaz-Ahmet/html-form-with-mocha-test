@@ -68,3 +68,16 @@ describe("Formulier drukknop", () => {
     assert.strictEqual(drukknop.value, "verzenden", "juist");
   });
 });
+describe("Formulier verzenden test", function () {
+  it("Controleer of de submit knop aanwezig is", function (done) {
+    JSDOM.fromFile("index.html")
+      .then(function (dom) {
+        const submitBtn = dom.window.document.querySelector("#verzenden");
+        assert.notStrictEqual(submitBtn, null);
+        done();
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  });
+});
